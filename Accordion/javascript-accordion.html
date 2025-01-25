@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Advanced Accordion</title>
+    <link rel="stylesheet" type="text/css" href="javascript-accordion.css">
+</head>
+<body>
+
+    <div class="accordion">
+        <div class="contentBx">
+        	<div class="label">List One</div>
+        	<div class="content">
+        		<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce rhoncus sodales quam, id auctor lorem hendrerit vel. Proin semper vulputate pretium. Suspendisse efficitur, felis eget accumsan lacinia, odio lorem ornare sem, eget interdum lacus quam id odio. Nulla pulvinar ullamcorper finibus. Praesent luctus ex sed est ultrices, nec commodo lorem porta. Mauris mattis velit suscipit ex accumsan suscipit. Aliquam velit ex, vestibulum id luctus et, cursus ac mi. Cras sed nisi sodales, rutrum purus non, interdum tortor. Nulla at sagittis velit. In libero nunc, viverra vel dui quis, vestibulum ultricies enim. Etiam ut consectetur nisl. Etiam sit amet metus ultricies, iaculis mi ac, fringilla nisl. Cras mollis ante velit, at pretium neque pulvinar id. Ut nisl elit, maximus eu lacus ut, sodales posuere risus.</p>
+        	</div>
+        </div>
+
+        <div class="contentBx">
+        	<div class="label">List Two</div>
+        	<div class="content">
+        		<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce rhoncus sodales quam, id auctor lorem hendrerit vel. Proin semper vulputate pretium. Suspendisse efficitur, felis eget accumsan lacinia, odio lorem ornare sem, eget interdum lacus quam id odio. Nulla pulvinar ullamcorper finibus. Praesent luctus ex sed est ultrices, nec commodo lorem porta. Mauris mattis velit suscipit ex accumsan suscipit. Aliquam velit ex, vestibulum id luctus et, cursus ac mi. Cras sed nisi sodales, rutrum purus non, interdum tortor. Nulla at sagittis velit. In libero nunc, viverra vel dui quis, vestibulum ultricies enim. Etiam ut consectetur nisl. Etiam sit amet metus ultricies, iaculis mi ac, fringilla nisl. Cras mollis ante velit, at pretium neque pulvinar id. Ut nisl elit, maximus eu lacus ut, sodales posuere risus.</p>
+        	</div>
+        </div>
+
+        <div class="contentBx">
+        	<div class="label">List Three</div>
+        	<div class="content">
+        		<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce rhoncus sodales quam, id auctor lorem hendrerit vel. Proin semper vulputate pretium. Suspendisse efficitur, felis eget accumsan lacinia, odio lorem ornare sem, eget interdum lacus quam id odio. Nulla pulvinar ullamcorper finibus. Praesent luctus ex sed est ultrices, nec commodo lorem porta. Mauris mattis velit suscipit ex accumsan suscipit. Aliquam velit ex, vestibulum id luctus et, cursus ac mi. Cras sed nisi sodales, rutrum purus non, interdum tortor. Nulla at sagittis velit. In libero nunc, viverra vel dui quis, vestibulum ultricies enim. Etiam ut consectetur nisl. Etiam sit amet metus ultricies, iaculis mi ac, fringilla nisl. Cras mollis ante velit, at pretium neque pulvinar id. Ut nisl elit, maximus eu lacus ut, sodales posuere risus.</p>
+        	</div>
+        </div>
+
+        <div class="contentBx">
+        	<div class="label">List Three</div>
+        	<div class="content">
+        		<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce rhoncus sodales quam, id auctor lorem hendrerit vel. Proin semper vulputate pretium. Suspendisse efficitur, felis eget accumsan lacinia, odio lorem ornare sem, eget interdum lacus quam id odio. Nulla pulvinar ullamcorper finibus. Praesent luctus ex sed est ultrices, nec commodo lorem porta. Mauris mattis velit suscipit ex accumsan suscipit. Aliquam velit ex, vestibulum id luctus et, cursus ac mi. Cras sed nisi sodales, rutrum purus non, interdum tortor. Nulla at sagittis velit. In libero nunc, viverra vel dui quis, vestibulum ultricies enim. Etiam ut consectetur nisl. Etiam sit amet metus ultricies, iaculis mi ac, fringilla nisl. Cras mollis ante velit, at pretium neque pulvinar id. Ut nisl elit, maximus eu lacus ut, sodales posuere risus.</p>
+        	</div>
+        </div>
+    </div>
+
+    <script type="text/javascript">
+    	const accordion = document.getElementsByClassName('contentBx');
+    	for(i = 0; i < accordion.length; i++){
+    		accordion[i].addEventListener('click', function(){
+    			this.classList.toggle('active')
+    		})
+    	}
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,79 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: #f0f2f5;
+    font-family: Arial, sans-serif;
+}
+
+.accordion {
+    width: 60%;
+    margin: 50px auto;
+}
+
+.accordion-item {
+    border-radius: 8px;
+    margin-bottom: 10px;
+    overflow: hidden;
+    transition: box-shadow 0.3s ease;
+    background: #ffffff;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.accordion-item[open] {
+    box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.2); /* Lifted shadow effect on open */
+}
+
+.accordion-item summary {
+    font-size: 22px;
+    font-weight: 600;
+    padding: 15px 20px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: linear-gradient(135deg, #f78ca0, #f9748f);
+    color: #fff;
+    transition: background 0.3s ease;
+}
+
+.accordion-item summary:hover {
+    background: linear-gradient(135deg, #f9748f, #f78ca0);
+}
+
+.accordion-item summary::marker {
+    display: none; /* Hide default marker */
+}
+
+.accordion-item summary::after {
+    content: "+";
+    font-size: 24px;
+    color: #fff;
+    transition: transform 0.4s ease, color 0.3s ease;
+}
+
+.accordion-item[open] summary::after {
+    content: "-";
+    transform: rotate(180deg); /* Rotate icon on open */
+    color: #f0c27b; /* Change color on open */
+}
+
+.accordion-item p {
+    font-size: 16px;
+    color: #444;
+    padding: 10px 20px 20px;
+    line-height: 1.6;
+    opacity: 0;
+    max-height: 0;
+    transform: translateY(-10px); /* Slide effect */
+    transition: opacity 0.4s ease, max-height 0.4s ease, transform 0.4s ease;
+}
+
+.accordion-item[open] p {
+    opacity: 1;
+    max-height: 500px;
+    transform: translateY(0);
+}
