@@ -77,3 +77,15 @@ body {
     max-height: 500px;
     transform: translateY(0);
 }
+
+
+@media (max-width: 768px) {
+    .accordion{
+      width: 80%;
+    }
+  }
+@media (max-width: 468px) {
+    .accordion{
+      width: 90%;
+    }
+  }
