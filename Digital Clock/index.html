@@ -7,6 +7,7 @@
     <style>
       body {
         background: black;
+        width: 100%;
       }
 
       .clock {
@@ -18,6 +19,16 @@
         font-size: 60px;
         font-family: Orbitron;
         letter-spacing: 7px;
+      }
+      @media (max-width:580px){
+        .clock{
+          font-size: 2.5rem;
+        }
+      }
+      @media (max-width:380px){
+        .clock{
+          font-size: 1rem;
+        }
       }
     </style>
   </head>
