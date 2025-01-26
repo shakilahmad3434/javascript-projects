@@ -47,18 +47,6 @@ Accordion menus are a common UI component used to display information in a colla
 
 ---
 
-## 💻 How to Use
-1. Clone the repository:
-   ```bash
-   git clone https://github.com/yourusername/accordion-menu.git
-   ```
-2. Navigate to the project directory:
-   ```bash
-   cd accordion-menu
-   ```
-3. Open `index.html` in your browser to view the accordion menus.
-
----
 
 ## 🔍 How It Works
 ### CSS Techniques Used:
@@ -71,18 +59,6 @@ Accordion menus are a common UI component used to display information in a colla
 
 ## 🛡️ License
 This project is licensed under the [MIT License](LICENSE). Feel free to use, modify, and distribute the code as per the license terms.
-
----
-
-## 🤝 Contributing
-We welcome contributions! To contribute:
-1. Fork the repository.
-2. Create a new branch:
-   ```bash
-   git checkout -b feature/your-feature-name
-   ```
-3. Commit your changes and push them to your fork.
-4. Open a pull request describing your changes.
 
 ---
 
