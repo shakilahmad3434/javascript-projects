@@ -2,6 +2,9 @@
 
 A simple and elegant **Digital Clock** built using HTML, CSS, and JavaScript. This project displays the current time, dynamically updating every second.
 
+![Digital Clock Preview](digital-clock.png)
+
+
 ---
 
 ## 📖 About the Project
