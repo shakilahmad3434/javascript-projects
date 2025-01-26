@@ -2,6 +2,11 @@
 
 A collection of **Accordion Menus** created using only HTML and CSS. This project showcases three different types of accordion menus based on difficulty levels: **Beginner**, **Intermediate**, and **Advanced**. Perfect for learners and developers looking to understand and implement pure CSS solutions for collapsible menus.
 
+![Simple Accordion Preview](simple-accordion.png)
+![Advance Accordion Preview](advance-accordion.png)
+![Accordion Preview](accordion.png)
+
+
 ---
 
 ## 📖 About the Project
