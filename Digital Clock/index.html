@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Digital Clock</title>
+    <style>
+      body {
+        background: black;
+      }
+
+      .clock {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translateX(-50%) translateY(-50%);
+        color: #17d4fe;
+        font-size: 60px;
+        font-family: Orbitron;
+        letter-spacing: 7px;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="MyClockDisplay" class="clock"></div>
+
+    <script>
+      function showTime() {
+        const todayDate = new Date();
+        document.querySelector(".clock").textContent = todayDate
+          .toLocaleString()
+          .split(",")[1];
+      }
+      setInterval(() => {
+        showTime();
+      }, 1000);
+      showTime();
+    </script>
+  </body>
+</html>
