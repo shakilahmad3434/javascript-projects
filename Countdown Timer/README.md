@@ -2,6 +2,9 @@
 
 A fully functional **Countdown Timer** built using HTML, CSS, and JavaScript. This project provides a sleek, responsive timer that allows users to count down to a specific date and time.
 
+![CountDown Timer Preview](countdown-timer.png)
+
+
 ---
 
 ## 📖 About the Project
