@@ -19,7 +19,7 @@ This project is great for events, launches, or any time-sensitive tasks requirin
 
 ## 🚀 Features
 - Real-time countdown updates.
-- Customizable target date and time.
+- Customizable target date and time and event Birthday.
 - Responsive design for seamless use across devices.
 - Simple and clean user interface.
 
@@ -39,19 +39,6 @@ This project is great for events, launches, or any time-sensitive tasks requirin
 
 ---
 
-## 💻 How to Use
-1. Clone the repository:
-   ```bash
-   git clone https://github.com/yourusername/countdown-timer.git
-   ```
-2. Navigate to the project directory:
-   ```bash
-   cd countdown-timer
-   ```
-3. Open `index.html` in your browser to use the timer.
-
----
-
 ## 🔍 How It Works
 1. The user sets a target date and time.
 2. JavaScript calculates the time difference between the current time and the target time.
@@ -62,18 +49,6 @@ This project is great for events, launches, or any time-sensitive tasks requirin
 
 ## 🛡️ License
 This project is licensed under the [MIT License](LICENSE). You are free to use, modify, and distribute the code as per the license terms.
-
----
-
-## 🤝 Contributing
-Contributions are welcome! To contribute:
-1. Fork the repository.
-2. Create a new branch:
-   ```bash
-   git checkout -b feature/your-feature-name
-   ```
-3. Commit your changes and push them to your fork.
-4. Open a pull request describing your changes.
 
 ---
 
