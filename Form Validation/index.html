@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css"
+      integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <title>Advance Form Validation</title>
+  </head>
+  <body class="body">
+    <div class="container">
+      <h1 class="main-heading">Sign Up</h1>
+      <form class="form">
+        <div class="input-wrapper">
+          <input
+            type="text"
+            name="firstname"
+            placeholder="First Name"
+            class="firstname"
+            required
+          />
+          <span class="error firstname-error"></span>
+        </div>
+        <div class="input-wrapper">
+          <input
+            type="text"
+            name="lastname"
+            placeholder="Last Name"
+            class="lastname"
+            required
+          />
+          <span class="error lastname-error"></span>
+        </div>
+        <div class="input-wrapper">
+          <input
+            type="email"
+            name="email"
+            placeholder="Email"
+            class="email"
+            required
+          />
+          <span class="error email-error"></span>
+        </div>
+        <div class="input-wrapper">
+          <div>
+            <input
+              type="password"
+              name="password"
+              placeholder="Password"
+              class="password"
+              required
+            />
+            <i class="fa-solid fa-lock"></i>
+          </div>
+          <span class="error password-error"></span>
+        </div>
+        <div class="input-wrapper">
+          <div>
+            <input
+              type="password"
+              name="confirmpassword"
+              placeholder="Confirm Password"
+              class="confirm-password"
+              required
+            />
+            <i class="fa-solid fa-lock"></i>
+          </div>
+          <span class="error confirmpassword-error"></span>
+        </div>
+        <button type="submit" class="button">REGISTER</button>
+        <span class="thank-you"></span>
+      </form>
+      <div class="backword"></div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
