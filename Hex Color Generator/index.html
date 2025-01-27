@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hex Color Generator</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+        body{
+            width: 100vw;
+            height: 100vh;
+            display: grid;
+            place-items: center;
+            background-color: #1cb27d;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        }
+        .container{
+            width: 40%;
+            background-color: rgba(255, 255, 255, 0.3);
+            backdrop-filter: blur(4px);
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+            border-radius: 1rem;
+            padding: 2rem;
+        }
+        h1{
+            text-align: center;
+            font-size: clamp(1rem, 10vw, 2rem); 
+        }
+        p{
+            font-size: clamp(.5rem, 10vw, 1.2rem); 
+            text-align: center;
+            color: rgba(0, 0, 0, 0.8);
+            font-style: italic;
+        }
+        span{
+            font-size: 1rem;
+            color: rgb(219, 32, 179);
+            letter-spacing: .1rem;
+        }
+        button{
+            padding: .5rem 1rem;
+            border-radius: .6rem;
+            border: none;
+            outline: none;
+            background-color: #fff;
+            color: rgb(15, 49, 121);
+            font-size: clamp(.8rem, 10vw, 1.2rem);
+            cursor: pointer;
+            transition: background-color .7s cubic-bezier(0.23, 1, 0.320, 1);
+        }
+        button:hover{
+            background-color: rgb(15, 49, 121);
+            color: #fff;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>Hex Color Code Generator</h1>
+        <p>Hex Code: <span class="hex-code"></span></p>
+        <button class="hex-generator">Change Hex Code</button>
+    </div>
+    
+    <script>
+        // get a reference
+        const dispalyHexCode = document.querySelector(".hex-code");
+        const hexCodeGenerator = () => {
+            const hexCodeChars = "0123456789abcdef";
+            let hexColorCode = ""
+            for(let i = 0; i < 6; i++){
+                let randomValue = Math.floor(Math.random() * hexCodeChars.length);
+               hexColorCode += hexCodeChars[randomValue];
+            }
+            dispalyHexCode.textContent = `#${hexColorCode}`;
+            document.body.style.backgroundColor = `#${hexColorCode}`
+        }
+        hexCodeGenerator()
+        document.querySelector(".hex-generator").addEventListener("click", hexCodeGenerator);
+
+        dispalyHexCode.addEventListener("click", function(){
+            navigator.clipboard.writeText(this.textContent);
+            
+        })
+
+
+    </script>
+</body>
+</html>
