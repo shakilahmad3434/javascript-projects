@@ -1,12 +1,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap');
-*{
+
+* {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
 }
 
-body{
-    font-family: "Nunito Sans";
+body {
+    font-family: "Nunito Sans", sans-serif;
     width: 100vw;
     height: 100vh;
     background-image: url("background.jpg");
@@ -17,23 +18,25 @@ body{
     place-items: center;
 }
 
-.container{
-    width: calc(100% - 75%);
+.container {
+    width: 90%;
+    max-width: 500px;
     background-color: rgba(0, 0, 0, 0.25);
-    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
     backdrop-filter: blur(4px);
-    border: 1px solid rgba( 255, 255, 255, 0.18 );
+    border: 1px solid rgba(255, 255, 255, 0.18);
     border-radius: 1rem;
-    padding: 3rem;
+    padding: 2rem;
     position: relative;
 }
 
-h1{
+h1 {
     font-size: 2rem;
     color: #fff;
+    text-align: center;
 }
 
-form{
+form {
     margin-top: 1.5rem;
     display: flex;
     flex-direction: column;
@@ -42,88 +45,131 @@ form{
     z-index: 100;
 }
 
-form input{
+form input {
     width: 100%;
     font-size: 1rem;
-    padding: .5rem;
+    padding: 0.5rem;
     border-radius: 0.4rem;
-    border: 1px solid rgba( 255, 255, 255, 0.38 );
+    border: 1px solid rgba(255, 255, 255, 0.38);
     outline: none;
     color: rgba(255, 255, 255, 0.5);
     background-color: transparent;
 }
 
 input:focus {
-    box-shadow: 0 0 0 0.1rem rgba(135, 206, 235, 0.5); 
-  }
+    box-shadow: 0 0 0 0.1rem rgba(135, 206, 235, 0.5);
+}
 
-  button{
+button {
     background-color: transparent;
-    border: 1px solid rgba( 255, 255, 255, 0.38 );
+    border: 1px solid rgba(255, 255, 255, 0.38);
     outline: none;
     color: rgba(255, 255, 255, 0.5);
     padding: 0.5rem;
     border-radius: 0.4rem;
     cursor: pointer;
-  }
+    font-size: 1rem;
+}
 
-  form div{
+form div {
     position: relative;
-  }
+}
 
-  form div i{
+form div i {
     font-size: 1rem;
     position: absolute;
     color: #fff;
     right: 1.2rem;
-    top: .6rem;
+    top: 0.6rem;
     cursor: pointer;
-  }
+}
 
-  button:hover{
+button:hover {
     box-shadow: 0 0 0 1px rgba(135, 206, 235, 0.5);
-  }
+}
 
-  .backword{
+.backword {
     width: 100%;
     height: 100%;
     position: absolute;
     font-size: 25rem;
-    color: rgba( 255, 255, 255, 0.18 );
+    color: rgba(255, 255, 255, 0.18);
     z-index: -1;
     top: 0;
     left: 7rem;
-  }
-  .input-wrapper{
+}
+
+.input-wrapper {
     display: flex;
     flex-direction: column;
-    gap: .2rem;
-  }
-  span.error{
-    color: red;
-  }
+    gap: 0.2rem;
+}
 
-  .thank-you{
+span.error {
+    color: red;
+    font-size: 0.875rem;
+}
+
+.thank-you {
     text-align: center;
     font-weight: 700;
     color: #fff;
     font-size: 1.5rem;
-  }
+}
 
-  @media (max-width:1380px){
-    .container{
-      width: calc(100% - 50%);
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .container {
+        width: 90%;
+        padding: 1.5rem;
     }
-  }
 
-  @media (max-width:991px){
-    .container{
-      width: calc(100% - 30%);
+    h1 {
+        font-size: 1.75rem;
     }
-  }
 
-  @media (max-width:680px){
-    .container{
-      width: calc(100% - 5%);
+    form input {
+        font-size: 0.875rem;
     }
-  }
+
+    button {
+        font-size: 0.875rem;
+    }
+
+    .backword {
+        font-size: 20rem;
+        left: 5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        width: 95%;
+        padding: 1rem;
+    }
+
+    h1 {
+        font-size: 1.5rem;
+    }
+
+    form input {
+        font-size: 0.75rem;
+    }
+
+    button {
+        font-size: 0.75rem;
+    }
+
+    .backword {
+        font-size: 15rem;
+        left: 3rem;
+    }
+
+    span.error {
+        font-size: 0.75rem;
+    }
+
+    .thank-you {
+        font-size: 1.25rem;
+    }
+}
