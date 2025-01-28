@@ -30,28 +30,6 @@ This project helps users create secure passwords for online accounts. With a sle
 
 ---
 
-## 🛠️ Tools & Technologies
-- **HTML5:** For creating the structure of the webpage.
-- **CSS3:** For designing an intuitive and responsive user interface.
-- **JavaScript:** For generating secure passwords and enabling user interactivity.
-
----
-
-## 💻 How to Use
-1. Clone the repository:
-   ```bash
-   git clone https://github.com/yourusername/password-generator.git
-   ```
-2. Navigate to the project directory:
-   ```bash
-   cd password-generator
-   ```
-3. Open `index.html` in your browser.
-4. Use the form to customize your password preferences and click "Generate Password."
-5. Copy the generated password with the "Copy" button.
-
----
-
 ## 🔍 How It Works
 1. Users select options like password length and character types.
 2. JavaScript generates a random password based on the selected options.
@@ -59,25 +37,8 @@ This project helps users create secure passwords for online accounts. With a sle
 
 ---
 
-## 🖼️ Preview
-![Password Generator Preview](assets/password-generator-preview.jpg)
-
----
-
 ## 🛡️ License
 This project is licensed under the [MIT License](LICENSE). You are free to use, modify, and distribute the code as per the license terms.
-
----
-
-## 🤝 Contributing
-Contributions are welcome! To contribute:
-1. Fork the repository.
-2. Create a new branch:
-   ```bash
-   git checkout -b feature/your-feature-name
-   ```
-3. Commit your changes and push them to your fork.
-4. Open a pull request describing your changes.
 
 ---
 
