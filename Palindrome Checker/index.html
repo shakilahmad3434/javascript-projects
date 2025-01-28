@@ -4,72 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Palindrome Checker</title>
-    <style>
-      * {
-        padding: 0;
-        margin: 0;
-        box-sizing: border-box;
-      }
-      body {
-        width: 100vw;
-        height: 100vh;
-        background-color: #f29f58;
-        display: grid;
-        place-items: center;
-        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-      }
-      .container {
-        width: calc(100% - 70%);
-        background-color: #1b1833;
-        border-radius: 1rem;
-        padding: 2rem;
-        color: #fff;
-      }
-      h2 {
-        font-size: 2rem;
-        text-align: center;
-      }
-      p {
-        font-size: 1.5rem;
-        margin-top: 2rem;
-      }
-      input {
-        width: 100%;
-        border-radius: 0.5rem;
-        padding: 1rem;
-        font-size: 1rem;
-        border: none;
-        outline: none;
-        margin-top: 2rem;
-        font-weight: 600;
-      }
-      button {
-        padding: 1rem 2rem;
-        font-size: 1rem;
-        border-radius: 0.5rem;
-        background-color: #f29f58;
-        border: none;
-        outline: none;
-        margin-top: 2rem;
-        width: 100%;
-        font-weight: 600;
-        cursor: pointer;
-        transition: background-color 0.4s cubic-bezier(0.23, 1, 0.32, 1),
-          color 0.4s cubic-bezier(0.23, 1, 0.32, 1);
-      }
-      button:hover {
-        background-color: #4b5945;
-        color: #fff;
-      }
-      .display_status {
-        text-align: center;
-        display: none;
-      }
-
-      .visible {
-        display: block;
-      }
-    </style>
+    <link rel="stylesheet" href="style.css">
   </head>
   <body>
     <div class="container">
@@ -92,37 +27,6 @@
       </p>
     </div>
 
-    <script>
-      const palindromeInput = document.querySelector(".palindrome_input");
-      document
-        .querySelector(".palindrome_btn")
-        .addEventListener("click", () => {
-          const palindromeValue = palindromeInput.value.trim();
-          if (!palindromeValue) {
-            alert("Please enter a text or number to check!");
-            return;
-          }
-          const cleanedInput = palindromeValue
-            .replace(/[^a-zA-Z0-9]/g, "")
-            .toLowerCase();
-          const reverseInput = cleanedInput.split("").reverse().join("");
-
-          if (reverseInput === palindromeValue) {
-            document.querySelector(
-              ".display_status"
-            ).innerHTML = `Yes, <span class="palindrome_words">'${palindromeValue}'</span> is a palindrome!`;
-            document.querySelector(".display_status").classList.add("visible");
-            document.querySelector(".palindrome_words").style.color = "green";
-          } else {
-            document.querySelector(
-              ".display_status"
-            ).innerHTML = `No, <span class="palindrome_words">'${palindromeValue}'</span> isn't a palindrome!`;
-            document.querySelector(".display_status").classList.add("visible");
-            document.querySelector(".palindrome_words").style.color = "red";
-          }
-
-          palindromeInput.value = "";
-        });
-    </script>
+    <script src="script.js"></script>
   </body>
 </html>
