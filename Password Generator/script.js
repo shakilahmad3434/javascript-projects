@@ -1,32 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="simpleGenerator.css">
-    <title>Simple Password Generator</title>
-</head>
-<body>
-    
-    <div class="container">
-        <h1>Simple <span>Random</span> <strong>Password</strong> Generator</h1>
-        <form>
-            <input type="text" class="userInput">
-            <img src="copy.png" alt="" class="copyText">
-        </form>
-        <span class="displayCopyText"></span>
-        <div class="PB-range-slider-div">
-            <input type="range" min="0" max="100" value="12" class="PB-range-slider" id="myRange">
-            <p class="PB-range-slidervalue"></p>
-        </div>
-        <div class="buttons">
-            <button class="button">Generate</button>
-        </div>
-    </div>
-
-    <script>
-
-        // Showing input slider value 
+    // Showing input slider value 
     const inputSlider = document.querySelector("#myRange");
     const sliderValue = document.querySelector(".PB-range-slidervalue");
     sliderValue.textContent = inputSlider.value;
@@ -66,9 +38,3 @@
             document.querySelector(".displayCopyText").style.display = "none";
         }, 2000);
     })
-
-
-    </script>
-    
-</body>
-</html>
