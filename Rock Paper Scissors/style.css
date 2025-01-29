@@ -1,0 +1,174 @@
+@import url('https://fonts.googleapis.com/css2?family=Audiowide&family=Parkinsans:wght@300..800&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    width: 100vw;
+    height: 100vh;
+    background-image: url("game.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    display: grid;
+    place-items: center;
+}
+
+.container{
+    width: calc(100% - 60%);
+    background-color: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(10px);
+    border-radius: 1rem;
+    padding: 2rem;
+}
+
+h1, h2{
+    font-family: "Audiowide", sans-serif;
+    color: #fff;
+    text-align: center;
+}
+
+h1{
+    font-size: 3rem;
+}
+
+h2{
+    font-size: 2rem;
+}
+
+.select_ammo{
+    text-align: center;
+    color: #fff;
+    font-family: "Parkinsans";
+    font-size: 1.5rem;
+    margin-top: 2rem;
+}
+
+.choose_game{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.choose_game .left {
+    transform: rotate(75deg);
+}
+
+.left_animation{
+    transform: rotate(75deg);
+    animation: leftAnimation 2s ease-in-out infinite alternate;
+}
+
+@keyframes leftAnimation {
+    0% {
+        transform: rotate(50deg);
+    }
+    50% {
+        transform: rotate(100deg);
+    }
+    100% {
+        transform: rotate(75deg);
+    }
+}
+
+.choose_game .right{
+    transform: rotate(-90deg);
+    }
+
+    .right_animation{
+        transform: rotate(75deg);
+        animation: rightAnimation 2s ease-in-out infinite alternate;
+    }
+
+    @keyframes rightAnimation {
+        0% {
+            transform: rotate(-50deg);
+        }
+        50% {
+            transform: rotate(-100deg);
+        }
+        100% {
+            transform: rotate(-75deg);
+        }
+    }
+
+.play_game{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+}
+
+.play_game div{
+    width: 5rem;
+    height: 5rem;
+    border-radius: 50%;
+    /* background-color: #fff; */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.play_game div div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.play_game div div img{
+    cursor: pointer;
+    width: 50%;
+}
+
+.play_game div p{
+    color: #fff;
+    font-family: "Parkinsans";
+    font-size: 1rem;
+}
+
+.display_notifications{
+    margin-bottom: 2rem;
+}
+
+.disabled {
+    pointer-events: none;
+    opacity: 0.5;
+}
+
+@media (max-width:1200px){
+    .container{
+        width: calc(100% - 40%);
+    }
+    h1{
+        font-size: 2rem;
+    }
+    h2{
+        font-size: 1.5rem;
+    }
+}
+
+@media (max-width:768px){
+    .container{
+        width: calc(100% - 20%);
+    }
+}
+
+@media (max-width:560px){
+    .container{
+        width: calc(100% - 8%);
+    }
+    h1{
+        font-size: 1.5rem;
+    }
+    h2{
+        font-size: 1rem;
+    }
+
+    .left, .right{
+        width: 150px;
+    }
+}

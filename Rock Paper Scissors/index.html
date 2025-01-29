@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Rock Paper Scissors</title>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Rock Paper Scissors</h1>
+      <p class="select_ammo">Select your ammo:</p>
+      <div class="choose_game">
+        <img src="rock.png" alt="rock" width="200" class="left" />
+        <img src="rock.png" alt="rock" width="200" class="right" />
+      </div>
+      <h2 class="display_notifications">Let's Play!</h2>
+      <div class="play_game">
+        <div>
+          <div><img src="rock.png" alt="rock" class="images" /></div>
+          <p>Rock</p>
+        </div>
+        <div>
+          <div><img src="paper.png" alt="paper" class="images" /></div>
+          <p>Paper</p>
+        </div>
+        <div>
+          <div><img src="scissors.png" alt="scissors" class="images" /></div>
+          <p>Scissors</p>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      const displayStatus = document.querySelector(".display_notifications");
+      const images = document.querySelectorAll(".images");
+
+      const choices = ["Rock", "Paper", "Scissors"];
+      // computer choice function
+      const getComputerChoice = () =>
+        choices[Math.floor(Math.random() * choices.length)];
+
+      const getWinner = (playerChoice, computerChoice) => {
+        if (playerChoice === computerChoice) return "Draw";
+        const winConditions = {
+          Rock: "Scissors",
+          Paper: "Rock",
+          Scissors: "Paper",
+        };
+
+        return winConditions[playerChoice] === computerChoice ? "Win" : "Lose";
+      };
+
+      document.querySelector(".play_game").addEventListener("click", (e) => {
+        // check conditon if click user in image element then working
+        if (e.target.tagName == "IMG") {
+          const playerChoice = e.target.alt;
+          
+          displayStatus.textContent = "Wait...";
+
+          // Disable all images
+          images.forEach((img) => img.classList.add("disabled"));
+          document.querySelector(".left").classList.add("left_animation");
+          document.querySelector(".right").classList.add("right_animation");
+
+          setTimeout(() => {
+            document.querySelector(".left").classList.remove("left_animation");
+            document
+              .querySelector(".right")
+              .classList.remove("right_animation");
+            const computerChoice = getComputerChoice();
+            const result = getWinner(playerChoice, computerChoice);
+
+            // Display result
+            displayStatus.textContent =
+              result === "Draw"
+                ? "It's a Draw!"
+                : result === "Win"
+                ? "You Won!"
+                : "Computer Won!";
+            images.forEach((img) => img.classList.remove("disabled"));
+          }, 2000);
+        }
+      });
+    </script>
+  </body>
+</html>
