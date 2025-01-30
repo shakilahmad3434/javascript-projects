@@ -1,22 +1,21 @@
-*{
+* {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
 }
 
-body{
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background-color: #B2C9AD;
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #F4F4F4;
     width: 100%;
     height: 100vh;
     display: grid;
     place-items: center;
 }
 
-.container{
+.container {
     margin-top: 2rem;
     width: calc(100% - 40%);
-    /* background-color: #fff; */
     display: flex;
     flex-direction: column;
     gap: 2rem;
@@ -24,116 +23,134 @@ body{
     align-items: center;
 }
 
-h1{
-    font-size: 2rem;
-    font-weight: 800;
+h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
     text-transform: uppercase;
+    color: #2C3E50;
+    letter-spacing: 1px;
 }
 
-.filter_category{
+.filter_category {
     width: 100%;
 }
 
-.filter_buttons{
+.filter_buttons {
     margin: 0 auto;
     width: 60%;
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
+    gap: 1rem;
 }
 
-button{
-    padding: .5rem 1rem;
-    background-color: transparent;
-    border: 1px solid rgba(0, 0, 0, 0.5);
+button {
+    padding: 0.75rem 1.5rem;
+    background-color: #3498DB;
+    border: none;
     font-size: 1rem;
-    border-radius: .3rem;
+    border-radius: 0.5rem;
     text-transform: uppercase;
-    font-weight: 500;
-    transition: background-color 0.5s cubic-bezier(0.23, 1, 0.320, 1);
-    cursor: pointer;
-}
-
-button:hover{
-    background-color: #000;
+    font-weight: 600;
     color: #fff;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
-/* item coding */
-.birds_container{
+button:hover {
+    background-color: #2980B9;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
+}
+
+button:active {
+    transform: translateY(0);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Bird item styling */
+.birds_container {
     width: 100%;
     display: flex;
     flex-wrap: wrap;
-    gap: 1rem;
+    gap: 1.5rem;
     justify-content: center;
-
 }
-.birds_item{
+
+.birds_item {
     width: 30%;
-    background-color: #1B1833;
-    border-radius: .3rem;
-    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    background-color: #fff;
+    border-radius: 0.5rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     cursor: pointer;
-    z-index: 1;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.birds_item div{
+.birds_item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+}
+
+.birds_item div {
     overflow: hidden;
 }
 
-.birds_item img{
+.birds_item img {
     width: 100%;
     transition: transform 0.5s cubic-bezier(0.39, 0.575, 0.565, 1);
 }
 
-.birds_item:hover img{
-    transform: scale(1.2);
+.birds_item:hover img {
+    transform: scale(1.1);
 }
 
-.birds_item p{
+.birds_item p {
     width: 100%;
     text-align: center;
-    color: #fff;
-    font-size: 1.3rem;
-    padding:1rem;
-    z-index: 10;
+    color: #2C3E50;
+    font-size: 1.2rem;
+    padding: 1rem;
+    font-weight: 500;
 }
 
-@media (max-width:1400px) {
-    .container{
+/* Responsive design */
+@media (max-width: 1400px) {
+    .container {
         width: calc(100% - 20%);
     }
 }
 
-@media (max-width:1024px) {
-    .container{
+@media (max-width: 1024px) {
+    .container {
         width: calc(100% - 10%);
     }
 }
 
-@media (max-width:991px) {
-    .container{
+@media (max-width: 991px) {
+    .container {
         width: calc(100% - 5%);
     }
-    .filter_buttons{
+    .filter_buttons {
         width: 95%;
     }
-    button{
-        font-size: .9rem;
+    button {
+        font-size: 0.9rem;
     }
-    .birds_item{
+    .birds_item {
         width: 48%;
     }
 }
 
-@media (max-width:640px){
-    .filter_buttons{
+@media (max-width: 640px) {
+    .filter_buttons {
         width: 95%;
         flex-wrap: wrap;
         justify-content: space-between;
         gap: 1rem;
     }
-    .birds_item{
+    .birds_item {
         width: 100%;
     }
 }
