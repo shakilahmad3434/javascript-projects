@@ -201,7 +201,6 @@ const handleAllBirds = (e) => {
         displayBirdsItem(obj);
       }
     });
-  console.log(e.target.textContent);
 }
 }
 
