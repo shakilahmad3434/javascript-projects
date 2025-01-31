@@ -349,17 +349,6 @@ form {
   color: var(--dark);
 }
 
-@media screen and (max-width: 530px) {
-  .notifications {
-    width: 95%;
-  }
-  .notifications .toast {
-    width: 100%;
-    font-size: 1rem;
-    margin-left: 20px;
-  }
-}
-
 .active{
     display: block;
 }
@@ -399,4 +388,23 @@ form {
 }
 .model_container button:last-child {
   background-color: chocolate;
+}
+
+@media screen and (max-width:768px){
+  .container{width: 90%;}
+}
+
+
+@media screen and (max-width: 530px) {
+  .container{
+    width: 95%;
+  }
+  .notifications {
+    width: 95%;
+  }
+  .notifications .toast {
+    width: 100%;
+    font-size: 1rem;
+    margin-left: 20px;
+  }
 }
