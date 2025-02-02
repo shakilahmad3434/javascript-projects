@@ -2,7 +2,7 @@
 
 An **Advanced Color Gradient Generator** built using HTML, CSS, and JavaScript. This tool allows users to generate dynamic gradient colors with a simple button click and easily copy the generated color codes.
 
-![Advance Gradient Color Code Generator Preview](assets/gradient-color-generator.png)
+![Advance Gradient Color Code Generator Preview](gradient-color-generator.png)
 
 ---
 
