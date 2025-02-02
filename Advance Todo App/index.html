@@ -1,54 +1,61 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css" integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css"
+      integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
     <title>Advance Todo App</title>
-</head>
-<body>
-
+  </head>
+  <body>
     <!-- start a main container coding -->
-     <div class="container">
-        <h1 class="main_heading">ToDo List <i class="fa-solid fa-book-open"></i></h1>
-        <!-- start a user item input form coding -->
-         <form>
-            <div class="inside_input">
-                <input type="text" placeholder="Add your task" class="todo_input">
-                <button class="submit_btn" type="submit"><i class="fa-solid fa-plus"></i></button>
-            </div>
-         </form>
-         <!-- start a list of todo list item -->
-          <div class="todo_container">
-            <!-- todo item indiviual start coding -->
-
-          </div>
-        <!-- end a list of todo list item -->
-         <!-- start a task bar buttons coding -->
-          <div class="task_container">
-            <div class="task_status">
-                <button class="all">All</button>
-                <button class="complete">Complete</button>
-                <button class="incomplete">Incomplete</button>
-              </div>
-          </div>
-          <!-- end a task bar buttons coding -->
-        <!-- start a toast bar coding -->
-        <ul class="notifications"></ul>
-        <!-- start a edit model -->
-        <div class="model">
-          <div>
-            <div class="model_container">
-              <input type="text" class="edit_input" />
-              <button class="save">Save</button>
-              <button class="cancel">Cancel</button>
-            </div>
+    <div class="container">
+      <h1 class="main_heading">
+        ToDo List <i class="fa-solid fa-book-open"></i>
+      </h1>
+      <!-- start a user item input form coding -->
+      <form>
+        <div class="inside_input">
+          <input type="text" placeholder="Add your task" class="todo_input" />
+          <button class="submit_btn" type="submit">
+            <i class="fa-solid fa-plus"></i>
+          </button>
+        </div>
+      </form>
+      <!-- start a list of todo list item -->
+      <div class="todo_container">
+        <!-- todo item indiviual start coding -->
+      </div>
+      <!-- end a list of todo list item -->
+      <!-- start a task bar buttons coding -->
+      <div class="task_container">
+        <div class="task_status">
+          <button class="all">All</button>
+          <button class="complete">Complete</button>
+          <button class="incomplete">Incomplete</button>
+        </div>
+      </div>
+      <!-- end a task bar buttons coding -->
+      <!-- start a toast bar coding -->
+      <ul class="notifications"></ul>
+      <!-- start a edit model -->
+      <div class="model">
+        <div>
+          <div class="model_container">
+            <input type="text" class="edit_input" />
+            <button class="save">Save</button>
+            <button class="cancel">Cancel</button>
           </div>
         </div>
-     </div>
-     <!-- end main container coding -->
-    
-</body>
-<script src="app.js"></script>
+      </div>
+    </div>
+    <!-- end main container coding -->
+  </body>
+  <script src="app.js"></script>
 </html>
