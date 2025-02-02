@@ -399,6 +399,16 @@ form {
   .container{
     width: 95%;
   }
+  .main_heading{
+    font-size: 1.5rem;
+    i{
+      font-size: 1.5rem;
+    }
+  }
+  .task_status{
+    flex-direction: column;
+  }
+  .task_status button{width: 100%;}
   .notifications {
     width: 95%;
   }
