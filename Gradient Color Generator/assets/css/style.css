@@ -119,3 +119,13 @@
 	  font-size: 0.8rem;
 	}
   }
+
+  @media (max-width:400px){
+	.buttons{
+		flex-direction: column;
+	}
+	.buttons button{
+		width: 100%;
+	    padding: 1rem 0;
+	}
+  }
