@@ -1,0 +1,262 @@
+@import url('https://fonts.googleapis.com/css2?family=Parkinsans:wght@300..800&display=swap');
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    width: 100%;
+    height: 100vh;
+    font-family: "Parkinsans", sans-serif;
+    background-color: #F6B17A;
+    display: grid;
+    place-items: center;
+}
+
+.start_quiz{
+    font-size: 2.5rem;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    background-color: #FFF4B7;
+    color: #021526;
+    padding: .5rem 1rem;
+    border-radius: .5rem;
+    font-weight: 600;
+    transition: background-color .5s cubic-bezier(0.23, 1, 0.320, 1), color .5s cubic-bezier(0.23, 1, 0.320, 1);
+    cursor: pointer;
+    display: block;
+}
+
+.start_quiz:hover{
+    background-color: #1B1833;
+    color: #fff;
+}
+
+/* starting a quiz rules and regulations */
+.quiz_rule{
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    background-color: #FFF4B7;
+    color: #021526;
+    padding: 1rem 0;
+    border-radius: .5rem;
+    display: none;
+}
+
+.quiz_rule h1{
+    font-size: 2rem;
+    border-bottom: 2px solid #FF6500;
+    padding: .5rem 2rem;
+}
+
+.quiz_rule-list{
+    padding: 1.5rem 2rem;
+    border-bottom: 2px solid #FF6500;
+}
+
+.quiz_rule-list li{
+    font-size: 1rem;
+    padding: .2rem;
+}
+
+.quiz_rule-list li a{
+    color: #FF6500;
+    text-decoration: none;
+}
+
+.quiz_rule-buttons{
+    padding: 1rem 1rem 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.quiz_rule-buttons button{
+    font-size: 1.2rem;
+    font-family: "Parkinsans", sans-serif;
+    padding: 0.5rem 1rem;
+    border-radius: .5rem;
+    border: 2px solid #FF6500;
+    cursor: pointer;
+}
+
+.quiz_rule-buttons button:first-child{
+    background-color: transparent;
+    color: #FF6500;
+    outline: none;
+    transition: background-color .5s cubic-bezier(0.455, 0.03, 0.515, 0.955), color .5s cubic-bezier(0.455, 0.03, 0.515, 0.955);
+}
+.quiz_rule-buttons button:first-child:hover{
+    background-color: #FF6500;
+    color: #fff;
+}
+
+.quiz_rule-buttons button:last-child{
+    background-color: #FF6500;
+    color: #fff;
+    outline: none;
+}
+
+/* starting a main quiz question and answer */
+.quiz_box{
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    background-color: #FFF4B7;
+    color: #021526;
+    padding: .4rem 0 1rem;
+    border-radius: .5rem;
+    display: none;
+}
+
+.quiz_heading{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+    padding: .8rem 1.5rem;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
+}
+
+.quiz_heading h2{
+    font-size: 1.8rem;
+}
+
+.quiz_heading button{
+    font-size: 1.2rem;
+    font-family: "Parkinsans", sans-serif;
+    padding: 0.6rem .8rem;
+    border-radius: .5rem;
+    border: 2px solid #FF6500;
+    background-color: #FF6500;
+    color: #fff;
+}
+
+.quiz_heading button span{
+    background-color: #fff;
+    color: #FF6500;
+    padding: 0.1rem .8rem;
+    border-radius: .4rem;
+    font-weight: 700;
+}
+
+.quiz_progress{
+    width: 100%;
+    height: .2rem;
+    background-color: #00224D;
+    position: relative;
+}
+
+.quiz_progress-bar{
+    position: absolute;
+    width: 0%;
+    height: 100%;
+    background-color: #1b61d9;
+}
+
+.quiz_container{
+    padding: 2rem;
+    border-bottom: 2px solid #FF6500;
+}
+
+.quiz_qustion{
+    font-size: 2rem;
+}
+
+.quiz_answer-list{
+    list-style: none;
+    margin-top: 1rem;
+}
+
+.quiz_answer-list li{
+    padding: 1rem;
+    font-size: 1rem 1.2rem;
+    background-color: #FF6500;
+    margin-bottom: .5rem;
+    border-radius: .5rem;
+    color: #fff;
+    cursor: pointer;
+    /* transition: background-color .5s cubic-bezier(0.455, 0.03, 0.515, 0.955); */
+}
+
+.quiz_answer-list li:hover{
+    background-color: #ff6600d0;
+}
+
+.quiz_total-question{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem 0;
+}
+
+.quiz_total-question p{
+    font-size: 1.2rem;
+}
+
+.quiz_total-question button{
+    font-size: 1.2rem;
+    font-family: "Parkinsans", sans-serif;
+    padding: 0.5rem 1rem;
+    border-radius: .5rem;
+    border: 2px solid #FF6500;
+    background-color: #FF6500;
+    color: #fff;
+    cursor: pointer;
+    transition: font-size 0.4s cubic-bezier(0.215, 0.610, 0.355, 1);
+}
+
+.quiz_total-question button:hover{
+    font-size: 1.3rem;
+}
+
+/* final score and victory starts coding */
+
+.final_score{
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    background-color: #FFF4B7;
+    color: #021526;
+    padding: 3rem;
+    border-radius: .5rem;
+    text-align: center;
+    display: none;
+}
+
+.final_score p{
+    font-size: 1.5rem;
+    margin-top: 2rem;
+}
+
+.score_buttons{
+    margin-top: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+
+.score_buttons button{
+    font-size: 1.2rem;
+    font-family: "Parkinsans", sans-serif;
+    padding: 0.5rem 1rem;
+    border-radius: .5rem;
+    border: 2px solid #FF6500;
+    color: #fff;
+    cursor: pointer;
+    transition: font-size 0.4s cubic-bezier(0.215, 0.610, 0.355, 1);
+}
+
+.score_buttons button:first-child{
+    background-color: #FF6500;
+}
+
+.score_buttons button:last-child{
+color: #FF6500;
+transition: background-color .5s cubic-bezier(0.23, 1, 0.320, 1), color .5s cubic-bezier(0.23, 1, 0.320, 1);
+}
+
+.score_buttons button:last-child:hover{
+    background-color: #FF6500;
+    color: #fff;
+}
+
+.next_question{
+    display: none;
+}
