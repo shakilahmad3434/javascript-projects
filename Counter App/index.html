@@ -3,24 +3,43 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Advanced Counter App</title>
+    <title>Counter App</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <div class="container">
-        <h1>Advanced Counter App</h1>
-        <div class="counter">
-            <button id="decrement">-</button>
-            <span id="count">0</span>
-            <button id="increment">+</button>
-        </div>
-        <div class="controls">
-            <button id="reset">Reset</button>
-            <input type="number" id="setValue" placeholder="Enter a value">
-            <button id="setButton">Set</button>
+        <div class="counter-card">
+            <h1>Counter</h1>
+            
+            <!-- Counter Display -->
+            <div class="counter-display">
+                <div class="counter-number" id="counter">0</div>
+            </div>
+
+            <!-- Control Buttons -->
+            <div class="button-container">
+                <div class="button-row">
+                    <!-- Decrease Button -->
+                    <button class="btn decrease" aria-label="Decrease count">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/></svg>
+                        <span>Decrease</span>
+                    </button>
+
+                    <!-- Increase Button -->
+                    <button class="btn increase" aria-label="Increase count">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="M12 5v14"/></svg>
+                        <span>Increase</span>
+                    </button>
+                </div>
+
+                <!-- Reset Button -->
+                <button class="btn reset" aria-label="Reset count">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12a9 9 0 1 0 9-9 9.75 9.75 0 0 0-6.74 2.74L3 8"/><path d="M3 3v5h5"/></svg>
+                    <span>Reset</span>
+                </button>
+            </div>
         </div>
     </div>
     <script src="script.js"></script>
 </body>
 </html>
-

@@ -1,48 +1,33 @@
-const count = document.getElementById("count")
-const incrementBtn = document.getElementById("increment")
-const decrementBtn = document.getElementById("decrement")
-const resetBtn = document.getElementById("reset")
-const setValue = document.getElementById("setValue")
-const setButton = document.getElementById("setButton")
+document.addEventListener('DOMContentLoaded', () => {
+    const counterDisplay = document.getElementById('counter');
+    const decreaseBtn = document.querySelector('.decrease');
+    const increaseBtn = document.querySelector('.increase');
+    const resetBtn = document.querySelector('.reset');
 
-let currentCount = 0
+    let count = 0;
 
-function updateCount() {
-  count.textContent = currentCount
-}
+    function updateDisplay() {
+        counterDisplay.textContent = count;
+        // Add animation class
+        counterDisplay.classList.add('animate');
+        // Remove animation class after animation completes
+        setTimeout(() => {
+            counterDisplay.classList.remove('animate');
+        }, 300);
+    }
 
-incrementBtn.addEventListener("click", () => {
-  currentCount++
-  updateCount()
-})
+    decreaseBtn.addEventListener('click', () => {
+        count--;
+        updateDisplay();
+    });
 
-decrementBtn.addEventListener("click", () => {
-  currentCount--
-  updateCount()
-})
+    increaseBtn.addEventListener('click', () => {
+        count++;
+        updateDisplay();
+    });
 
-resetBtn.addEventListener("click", () => {
-  currentCount = 0
-  updateCount()
-})
-
-setButton.addEventListener("click", () => {
-  const newValue = Number.parseInt(setValue.value)
-  if (!isNaN(newValue)) {
-    currentCount = newValue
-    updateCount()
-    setValue.value = ""
-  }
-})
-
-// Add keyboard support
-document.addEventListener("keydown", (event) => {
-  if (event.key === "ArrowUp") {
-    currentCount++
-    updateCount()
-  } else if (event.key === "ArrowDown") {
-    currentCount--
-    updateCount()
-  }
-})
-
+    resetBtn.addEventListener('click', () => {
+        count = 0;
+        updateDisplay();
+    });
+});
