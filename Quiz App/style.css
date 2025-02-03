@@ -260,3 +260,22 @@ transition: background-color .5s cubic-bezier(0.23, 1, 0.320, 1), color .5s cubi
 .next_question{
     display: none;
 }
+
+/* mobile responsive coding  */
+@media (max-width: 640px){
+    .container{
+        width: 90%;
+    }
+    .quiz_heading{
+        flex-direction: column;
+        justify-content: start;
+        justify-items: start;
+    }
+    .quiz_heading h2{
+        font-size: 1.2rem;
+    }
+
+    .quiz_heading button{
+        font-size: .8rem;
+    }
+}
