@@ -278,4 +278,15 @@ transition: background-color .5s cubic-bezier(0.23, 1, 0.320, 1), color .5s cubi
     .quiz_heading button{
         font-size: .8rem;
     }
+
+    .quiz_qustion{
+        font-size: 1.2rem;
+    }
+    .score_buttons{
+        flex-direction: column;
+        width: 100%;
+    }
+    .score_buttons button{
+        width: 100%;
+    }
 }
