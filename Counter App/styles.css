@@ -110,3 +110,9 @@ h1 {
 svg {
     flex-shrink: 0;
 }
+
+@media (max-width:400px){
+    .button-row{
+        flex-direction: column;
+    }
+}
